@@ -2,57 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Wedding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
     <style>
         body {
-            margin: 0;
-            overflow: hidden;
+            background-color: #f8f8f8;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .invitation {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            width: 90%;
+            max-width: 600px;
         }
         .flower {
             position: absolute;
-            animation: float 5s ease-in-out infinite;
+            animation: float 3s infinite;
         }
         @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
-        }
-        .firework {
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            background: yellow;
-            border-radius: 50%;
-            animation: explode 1s ease-in-out forwards;
-        }
-        @keyframes explode {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(3); opacity: 0; }
+            0% { transform: translatey(0); }
+            50% { transform: translatey(-20px); }
+            100% { transform: translatey(0); }
         }
     </style>
 </head>
 <body>
-    <script>
-        function createFlower() {
-            const flower = document.createElement('div');
-            flower.classList.add('flower');
-            flower.style.left = Math.random() * 100 + 'vw';
-            flower.style.bottom = 0;
-            flower.style.width = Math.random() * 50 + 'px';
-            flower.style.height = flower.style.width;
-            document.body.appendChild(flower);
-            setTimeout(() => flower.remove(), 5000);
-        }
-        function createFirework() {
-            const firework = document.createElement('div');
-            firework.className = 'firework';
-            firework.style.left = Math.random() * 100 + 'vw';
-            firework.style.bottom = Math.random() * 100 + 'vh';
-            document.body.appendChild(firework);
-            setTimeout(() => firework.remove(), 1000);
-        }
-        setInterval(createFlower, 1000);
-        setInterval(createFirework, 2000);
-    </script>
+    <div class="invitation">
+        <h1>You are Invited to Our Wedding!</h1>
+        <p>Join us for a day filled with love, joy, and celebration.</p>
+        <p>Date: June 15, 2026</p>
+        <p>Location: The Grand Hall</p>
+        <div class="effects">
+            <img src="flower.png" alt="Flower" class="flower">
+            <img src="firework.png" alt="Firework" class="firework">
+        </div>
+    </div>
 </body>
 </html>
