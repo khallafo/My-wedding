@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud & Nourhan - Wedding Celebration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F4F1ED; /* Cream/Beige background */
+            --primary-color: #72202E; /* Burgundy red */
+            --accent-color: #C3A36D; /* Gold */
+            --text-color: #5A5A5A;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5rem;
+            color: var(--primary-color);
+            margin: 10px 0;
+            line-height: 1.2;
+        }
+
+        .getting-married {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin: 20px 0;
+        }
+
+        .date-location {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-color);
+            margin-top: 10px;
+        }
+
+        .divider {
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+            margin: 20px auto;
+        }
+
+        /* Countdown Section */
+        .countdown-container {
+            margin: 40px 0;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .time-box {
+            display: flex;
+            flex-direction: column;
+            color: var(--primary-color);
+        }
+
+        .time-box span {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .time-box label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-color);
+        }
+
+        /* Photo Gallery Section */
+        .gallery {
+            padding: 40px 20px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd; /* Placeholder color */
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid var(--accent-color);
+        }
+
+        /* Location Section */
+        .location-section {
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 1px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Decorative Flowers (CSS placeholders) */
+        .flower-top-left, .flower-bottom-right {
+            position: absolute;
+            width: 150px;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+        .flower-top-left {
+            top: -20px;
+            left: -20px;
+            transform: rotate(45deg);
+        }
+        .flower-bottom-right {
+            bottom: -20px;
+            right: -20px;
+            transform: rotate(-135deg);
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <svg class="flower-top-left" viewBox="0 0 100 100" fill="#72202E" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 0 C60 30 80 40 100 50 C80 60 60 70 50 100 C40 70 20 60 0 50 C20 40 40 30 50 0 Z" opacity="0.6"/>
+        </svg>
+
+        <div class="subtitle">You are cordially invited to the wedding of</div>
+        <div class="names">Mahmoud <br> <span style="font-size: 3rem;">&</span> <br> Nourhan</div>
+        
+        <div class="divider"></div>
+        <div class="getting-married">Are getting married</div>
+        
+        <div class="date-location">
+            May 9, 2026 • Cairo, Egypt
+        </div>
+
+        <svg class="flower-bottom-right" viewBox="0 0 100 100" fill="#72202E" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 0 C60 30 80 40 100 50 C80 60 60 70 50 100 C40 70 20 60 0 50 C20 40 40 30 50 0 Z" opacity="0.6"/>
+        </svg>
+    </section>
+
+    <section class="countdown-container">
+        <div class="subtitle">Counting down the days</div>
+        <div class="countdown" id="countdown">
+            <div class="time-box"><span id="days">00</span><label>Days</label></div>
+            <div class="time-box"><span>:</span><label>&nbsp;</label></div>
+            <div class="time-box"><span id="hours">00</span><label>Hours</label></div>
+            <div class="time-box"><span>:</span><label>&nbsp;</label></div>
+            <div class="time-box"><span id="minutes">00</span><label>Mins</label></div>
+            <div class="time-box"><span>:</span><label>&nbsp;</label></div>
+            <div class="time-box"><span id="seconds">00</span><label>Secs</label></div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="getting-married">Our Memories</div>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=400&q=80" alt="Couple Photo 1" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=400&q=80" alt="Couple Photo 2" class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=400&q=80" alt="Couple Photo 3" class="gallery-item">
+        </div>
+    </section>
+
+    <section class="location-section">
+        <div class="names" style="font-size: 3rem;">Join Us</div>
+        <div class="divider"></div>
+        <p style="font-weight: bold; margin-bottom: 5px;">The View Open Air Hall</p>
+        <p style="margin-top: 0;">Galaa Club (نادي الجلاء)</p>
+        
+        <a href="https://maps.app.goo.gl/cfzu9YG9PvhgDU7R9?g_st=ac" target="_blank" class="btn">View on Google Maps</a>
+    </section>
+
+    <script>
+        // Set the date we're counting down to: May 9, 2026
+        const countDownDate = new Date("May 9, 2026 18:00:00").getTime();
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<div class='getting-married'>Today is the day!</div>";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
